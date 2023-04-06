@@ -1,7 +1,4 @@
-﻿//// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
-
-public static class StringExtensions
+﻿public static class StringExtensions
 {
     public static string Reverse(this string str)
     {
@@ -16,10 +13,13 @@ public class Program
 {
     public static void Main()
     {
-        string orignialString = "Hello world";
-        Console.WriteLine(orignialString);
+        // Create a string object name myString
+        string myString = "Hello, world!";
 
-        string reverseString = orignialString.Reverse();
-        Console.WriteLine(reverseString);
+        // Apply Reverse method on myString object
+        string reversedString = myString.Reverse();
+        Console.WriteLine(reversedString); 
+        
+        // Outputs "!dlrow ,olleH"
     }
 }
