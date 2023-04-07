@@ -2,6 +2,7 @@
 
 namespace NumberFilter
 {
+    // Declare a delegate which takes an integer value
     public delegate bool FilterDelegate(int value);
     public class NumberFilter
     {
@@ -30,13 +31,18 @@ namespace NumberFilter
         {
             List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-            //FilterDelegate filterDelegate = new FilterDelegate(Program.IsEvenNumber(int number));
+            //The delegate (int number) syntax that you see in the Main method is creating
+            //an anonymous method that matches the signature of the FilterDelegate delegate.
 
-            // what does delegate (int number) means
+            /*
             List<int> evenNumbers = NumberFilter.Filter(numbers, delegate (int number)
             {
                 return number % 2 == 0;
             });
+            */
+
+            // The above code can be rewrite without anonymous method as follows
+            List<int> evenNumbers = NumberFilter.Filter(numbers, IsEvenNumber);
 
             Console.WriteLine("Even numbers:");
 
@@ -58,4 +64,20 @@ namespace NumberFilter
             }
         }
     }
+
+    /*Ouput:
+     * Even numbers:
+        2
+        4
+        6
+        8
+        10
+        Odd numbers
+        1
+        3
+        5
+        7
+        9
+     * 
+     */
 }
