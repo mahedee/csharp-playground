@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesDemo", "DelegatesDemo\DelegatesDemo.csproj", "{186680ED-4296-40A7-8A32-B738D462E83B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesDemo", "DelegatesDemo\DelegatesDemo.csproj", "{186680ED-4296-40A7-8A32-B738D462E83B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MulticastDelegatesDemo", "MulticastDelegatesDemo\MulticastDelegatesDemo.csproj", "{FD2BD8C7-EB1A-4E15-8C42-99AF8C27C269}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesReturnsType", "DelegatesRetunType\DelegatesReturnsType.csproj", "{05975FAA-3355-4514-89B3-4CD64A10CA11}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsDemo", "EventsDemo\EventsDemo.csproj", "{6462D32C-CA23-412A-9149-3E4A57A6D406}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomEventArgs", "CustomEventArgs\CustomEventArgs.csproj", "{96E3CB42-F048-4E18-9F02-8ED76D59214E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6462D32C-CA23-412A-9149-3E4A57A6D406}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6462D32C-CA23-412A-9149-3E4A57A6D406}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6462D32C-CA23-412A-9149-3E4A57A6D406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E3CB42-F048-4E18-9F02-8ED76D59214E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E3CB42-F048-4E18-9F02-8ED76D59214E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E3CB42-F048-4E18-9F02-8ED76D59214E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E3CB42-F048-4E18-9F02-8ED76D59214E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
