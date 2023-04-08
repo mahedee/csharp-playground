@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesDemo", "DelegatesD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MulticastDelegatesDemo", "MulticastDelegatesDemo\MulticastDelegatesDemo.csproj", "{FD2BD8C7-EB1A-4E15-8C42-99AF8C27C269}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesReturnsType", "DelegatesRetunType\DelegatesReturnsType.csproj", "{05975FAA-3355-4514-89B3-4CD64A10CA11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FD2BD8C7-EB1A-4E15-8C42-99AF8C27C269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD2BD8C7-EB1A-4E15-8C42-99AF8C27C269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD2BD8C7-EB1A-4E15-8C42-99AF8C27C269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05975FAA-3355-4514-89B3-4CD64A10CA11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05975FAA-3355-4514-89B3-4CD64A10CA11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05975FAA-3355-4514-89B3-4CD64A10CA11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05975FAA-3355-4514-89B3-4CD64A10CA11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

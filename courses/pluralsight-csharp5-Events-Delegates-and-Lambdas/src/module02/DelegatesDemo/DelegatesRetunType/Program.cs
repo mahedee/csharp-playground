@@ -3,7 +3,7 @@
 namespace DelegatesDemo
 {
     // Declare a delegate with delegate keyword
-    public delegate void WorkPerformedDelegate(int hours, WorkType workType);
+    public delegate int WorkPerformedDelegate(int hours, WorkType workType);
     public enum WorkType
     {
         Meeting,
@@ -14,21 +14,24 @@ namespace DelegatesDemo
     internal class Program
     {
         // Create Handler 1 method with exact signature of delegate
-        public static void WorkPerformedHandler1(int  hour, WorkType workType)
+        public static int WorkPerformedHandler1(int  hour, WorkType workType)
         {
             Console.WriteLine("Work performed handler 1 with hour log: " + hour);
+            return hour + 1;
         }
 
         // Create Handler 2 method with exact signature of delegate
-        public static void WorkPerformedHandler2(int hour, WorkType workType)
+        public static int WorkPerformedHandler2(int hour, WorkType workType)
         {
             Console.WriteLine("Work performed handler 2 with hour log: " + hour);
+            return hour + 2;
         }
 
         // Create Handler 3 method with exact signature of delegate
-        public static void WorkPerformedHandler3(int hour, WorkType workType)
+        public static int WorkPerformedHandler3(int hour, WorkType workType)
         {
             Console.WriteLine("Work performed handler 3 with hour log: " + hour);
+            return hour + 3;
         }
 
         static void Main(string[] args)
@@ -53,7 +56,12 @@ namespace DelegatesDemo
             // workPerformedDelegate1 += workPerformedDelegate3;
 
             // Now when you invoke one delegates all 3 registered handler will be called
-            workPerformedDelegate1(4, WorkType.Study);
+            // but returns only last delegates from the invocation list
+            // you will get 3 different return value if you call them separately
+            // so the output will be 4+3 = 7
+            int finalHours = workPerformedDelegate1(4, WorkType.Study);
+
+            Console.WriteLine(finalHours);
 
 
             Console.ReadKey();
@@ -67,6 +75,7 @@ namespace DelegatesDemo
 Work performed handler 1 with hour log: 4
 Work performed handler 2 with hour log: 4
 Work performed handler 3 with hour log: 4
+7
 
  * 
  */
