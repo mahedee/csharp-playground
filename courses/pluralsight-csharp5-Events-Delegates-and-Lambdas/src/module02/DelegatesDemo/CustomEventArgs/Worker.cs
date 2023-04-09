@@ -1,12 +1,19 @@
-﻿namespace EventsDemo
+﻿using CustomEventArgs;
+using System;
+
+namespace EventsDemo
 {
-    // Declare a delegate with delegate keyword
-    public delegate void WorkPerformedDelegate(int hours, WorkType workType);
+    // Declare a delegate with delegate keyword. You can use like below or change using generic
+    // public delegate void WorkPerformedHandler(object sender, WorkPerformedEventArgs e);
 
     public class Worker
     {
-        public event WorkPerformedDelegate WorkPerformed;
+        //public event WorkPerformedHandler WorkPerformed;
 
+        // Instead of using the previous statement we can use the following code using generics
+        // EventHandler<T> provides a simple way to create a custom delegate for an event
+        public EventHandler<WorkPerformedEventArgs> WorkPerformed;
+        
         // EventHandler is built in delegates of .net 
         public event EventHandler WorkCompleted;
 
@@ -16,6 +23,8 @@
         {
             for(int i = 0; i < hours; i++)
             {
+                // Sleep for 1 second to see it's working. it's not mandatory
+                System.Threading.Thread.Sleep(1000);
                 OnWorkPerformed(i + 1, workType);
             }
 
@@ -26,17 +35,15 @@
         // On is used in the method name as convention not rule
         protected virtual void OnWorkPerformed(int hours, WorkType workType)
         {
-            // You can call either way. 
+     
+            //var del = WorkPerformed as WorkPerformedHandler;
 
-            //if(WorkPerformed != null)
-            //{
-            //    WorkPerformed(hours, workType);
-            //}
+            var del = WorkPerformed as EventHandler<WorkPerformedEventArgs>;
 
-            var del = WorkPerformed as WorkPerformedDelegate;
             if (del != null)
             {
-                del(hours, workType);
+                //del(hours, workType);
+                del(this, new WorkPerformedEventArgs(hours, workType));
             }
         }
 

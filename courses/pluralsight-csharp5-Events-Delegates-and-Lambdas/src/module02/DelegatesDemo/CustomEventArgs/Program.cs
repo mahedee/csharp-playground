@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using CustomEventArgs;
+using System;
+using System.ComponentModel;
 
 namespace EventsDemo
 {
@@ -11,27 +13,16 @@ namespace EventsDemo
 
     internal class Program
     {
-        // Create Handler method with exact signature of delegate
-        public static void WorkPerformedHandler(int hour, WorkType workType)
-        {
-            Console.WriteLine("Work performed handler 1 with hour log: " + hour);
-        }
-
-        // Create handler method with exact signature of EventHandler delegate
-        private static void WorkCompletedHandler(object? sender, EventArgs e)
-        {
-            Console.WriteLine("Work completed");
-        }
 
         static void Main(string[] args)
         {
             Worker worker = new Worker();
 
-            // instanciate and bind with event's invocation list
-            worker.WorkPerformed += new WorkPerformedDelegate(WorkPerformedHandler);
+            // The += operator is used to attach an event to an event handler
+            worker.WorkPerformed += new EventHandler<WorkPerformedEventArgs>(Worker_WorkPerformed);
 
             // instanciate and bind with event's invocation list
-            worker.WorkCompleted += new EventHandler(WorkCompletedHandler);
+            worker.WorkCompleted += new EventHandler(Worker_WorkCompleted);
 
             // Raise events
             worker.DoWork(3, WorkType.Playing);
@@ -40,17 +31,28 @@ namespace EventsDemo
             Console.ReadKey();
         }
 
+        // Create Handler method with exact signature of delegate
+        private static void Worker_WorkCompleted(object? sender, EventArgs e)
+        {
+            Console.WriteLine("Worker is done");
+        }
 
+        // Create Handler method with exact signature of delegate
+
+        private static void Worker_WorkPerformed(object? sender, WorkPerformedEventArgs e)
+        {
+            Console.WriteLine("Hours worked: " + e.Hours + " " + e.WorkType);
+        }
     }
 }
 
 /* Output:
  * 
 
-Work performed handler 1 with hour log: 1
-Work performed handler 1 with hour log: 2
-Work performed handler 1 with hour log: 3
-Work completed
+Hours worked: 1 Playing
+Hours worked: 2 Playing
+Hours worked: 3 Playing
+Worker is done
 
  * 
  */
