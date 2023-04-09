@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-EventsDemo", "EventsDemo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-CustomEventArgs", "CustomEventArgs\05-CustomEventArgs.csproj", "{96E3CB42-F048-4E18-9F02-8ED76D59214E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-DelegateInference", "DelegateInference\06-DelegateInference.csproj", "{DD67C952-4AD4-446F-825B-A5D2BC7B7D6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{96E3CB42-F048-4E18-9F02-8ED76D59214E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96E3CB42-F048-4E18-9F02-8ED76D59214E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96E3CB42-F048-4E18-9F02-8ED76D59214E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD67C952-4AD4-446F-825B-A5D2BC7B7D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD67C952-4AD4-446F-825B-A5D2BC7B7D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD67C952-4AD4-446F-825B-A5D2BC7B7D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD67C952-4AD4-446F-825B-A5D2BC7B7D6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
