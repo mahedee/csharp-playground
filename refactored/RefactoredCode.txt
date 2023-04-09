@@ -1,1 +1,3 @@
-Refactored code here
+- Refactored code here
+
+- With my own example
