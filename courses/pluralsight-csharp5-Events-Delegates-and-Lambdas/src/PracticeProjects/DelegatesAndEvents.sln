@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11-FuncT", "FuncT\11-FuncT.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12-LambdaAndFuncT", "LambdaAndFuncT\12-LambdaAndFuncT.csproj", "{5A28041E-901A-4FB9-A3A2-228E9B790E63}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13-CommunicatingBetweenControls", "CommunicatingBetweenControls\13-CommunicatingBetweenControls.csproj", "{73EFFCFE-4A36-4EA8-83E5-5421B17CF76E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{5A28041E-901A-4FB9-A3A2-228E9B790E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A28041E-901A-4FB9-A3A2-228E9B790E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A28041E-901A-4FB9-A3A2-228E9B790E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73EFFCFE-4A36-4EA8-83E5-5421B17CF76E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73EFFCFE-4A36-4EA8-83E5-5421B17CF76E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73EFFCFE-4A36-4EA8-83E5-5421B17CF76E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73EFFCFE-4A36-4EA8-83E5-5421B17CF76E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
