@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using BasicProgramming.TestDemo;
 
 namespace BasicProgramming
 {
@@ -66,6 +67,9 @@ namespace BasicProgramming
 
             Solution solution = new Solution();
             var result = solution.MergeTwoLists(listNode1, listNode2);
+
+            TestApp testDemo = new TestApp();
+            testDemo.Test();
 
             Console.WriteLine("Hello, World!");
 

@@ -19,27 +19,33 @@
         {
             ListNode head = result;
 
+            // if linked list is empty then create new node and return
             if (head == null)
             {
                 head = new ListNode(val);
                 return head;
             }
 
-            // reach to the last node
-
+            // if linked list is not empty then iterate till last node
+            // and add new node to the last node
+            // temp is used to iterate the linked list till last node
+            // temp is not changing the value of head because head is pointing to the first node
+            // ListNode temp = head; here you are not making a deep copy of the linked list
 
             ListNode temp = head;
-            // iterate till last node
-            // but doesn't change the value of head
             while (temp.next != null)
             {
+                //This statement essentially reassigns the temp reference to point to the next node in the list.
+                //Importantly, this does not change the value of head; it only modifies the temp reference.
+                //because temp and head are not making a deep copy of the linked list
                 temp = temp.next;
             }
 
             // add new node to the last node
+            // this will change the value of head because head is pointing to the first node
+            // and temp is now pointing to the last node of the list
             temp.next = new ListNode(val);
 
-            // how it change the value of head here??
             return head;
         }
 
